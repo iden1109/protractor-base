@@ -25,7 +25,7 @@ Windows 7以上，Mac OSX 10.6以上，Linux 最新版本
 > ### Windows
 > [Git](https://git-scm.com/)
 
-> ### Mac OSX Only
+> ### Mac OSX
 > ```zsh
 > :~$ brew install git
 > ```
@@ -34,10 +34,10 @@ Windows 7以上，Mac OSX 10.6以上，Linux 最新版本
 ### Node.js
 建議安裝 v10.16.3LTS
 
-> #### Windows Only
+> #### Windows
 >[Node.js](https://nodejs.org/download/release/v10.16.3/)
 
-> #### Mac OSX Only
+> #### Mac OSX
 > ```zsh
 > :~$ brew install node@10
 > ```
@@ -46,12 +46,12 @@ Windows 7以上，Mac OSX 10.6以上，Linux 最新版本
     ```zsh
     :~$ node -v
     ```
-    確認版本為v10.16.3LTS
+    確認版本是v10.16.3LTS
     
     ```zsh
     :~$ npm -v
     ```
-    確認版本為v6.9.0
+    接著確認版本是v6.9.0
 
 
 ### Visual Studio Code
@@ -63,7 +63,7 @@ Windows 7以上，Mac OSX 10.6以上，Linux 最新版本
 
 ### Java SE Runtime Environment 1.8
 [JRE 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
-若有使用到 Selenium Standalone Server需有JRE 1.8以上才能執行。
+若有使用到 Selenium Standalone Server ，你的開發環境需有安裝JRE 1.8以上才能正常執行。
 
 * #### 安裝後檢查
     ```zsh
@@ -83,16 +83,16 @@ Windows 7以上，Mac OSX 10.6以上，Linux 最新版本
     ```zsh
     :~$ protractor --version
     ```
-    有出現版本表示Protractor可以工作
+    有出現版本資訊表示Protractor可以正常工作
 
 ### webdriver-manager保持最新版
 ```zsh
 :~$ webdriver-manager update
 ```
-Web Driver Manager用來啟動Selenium Server 
+Web Driver Manager用來啟動Selenium Server，如果沒辦法通過授權，出現下方的錯誤，請使用"--ignore_ssl=true"強制不使用ssl更新。
 
 ![alt text](assets/images/webdriver-manager-ceti-fail.png "result")
-如果沒辦法通過授權，請使用這個
+
 ```zsh
 :~$ webdriver-manager update --ignore_ssl=true
 ```
@@ -101,7 +101,7 @@ Web Driver Manager用來啟動Selenium Server
     ```zsh
     :~$ webdriver-manager start
     ```
-    測試啟動一個Server，啟動成功後開啟瀏覽器檢查一下http://localhost:4444/wd/hub
+    測試看看能否正常啟動Server，啟動成功後，開啟瀏覽器檢查一下 http://localhost:4444/wd/hub
 
 ## [確認Protractor正常運作]
 * 下載範本
@@ -112,13 +112,13 @@ Web Driver Manager用來啟動Selenium Server
 
 * 安裝npm套件
     ```zsh
+    :~$ npm install
+    ```
+    
+    ```zsh
     :~$ npm login
     ```
     (登入取得授權，如果需要的話)
-    
-    ```zsh
-    :~$ npm install
-    ```
 
 * 執行Protractor測試
     ```zsh
