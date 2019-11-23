@@ -63,6 +63,7 @@ Windows 7以上，Mac OSX 10.6以上，Linux 最新版本
 
 ### Java SE Runtime Environment 1.8
 [JRE 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
+
 若有使用到 Selenium Standalone Server ，你的開發環境需有安裝JRE 1.8以上才能正常執行。
 
 * #### 安裝後檢查
@@ -98,10 +99,11 @@ Web Driver Manager用來啟動Selenium Server，如果沒辦法通過授權，�
 ```
 
 * #### 安裝後檢查
+    測試能否正常啟動Server
     ```zsh
     :~$ webdriver-manager start
     ```
-    測試看看能否正常啟動Server，啟動成功後，開啟瀏覽器檢查一下 http://localhost:4444/wd/hub
+    啟動成功後，開啟瀏覽器檢查一下這個網址 http://localhost:4444/wd/hub
 
 ## [確認Protractor正常運作]
 * 下載範本
@@ -125,7 +127,7 @@ Web Driver Manager用來啟動Selenium Server，如果沒辦法通過授權，�
     :~$ npm test
     ```
 
-* 確認結果是否正確
+* 確認有出現下方的執行結果，表示Protractor能正確執行測試案例
 
     ![alt text](assets/images/npm-test-success.png "result")
 
@@ -133,3 +135,4 @@ Web Driver Manager用來啟動Selenium Server，如果沒辦法通過授權，�
 ## [Reference]
 * [Setting Up Protractor](https://www.protractortest.org/#/tutorial)
 * [FaQ](https://github.com/angular/protractor/blob/master/docs/faq.md)
+
