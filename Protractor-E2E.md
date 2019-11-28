@@ -63,7 +63,7 @@ Windows 7以上，Mac OSX 10.6以上，Linux 最新版本
 
 ### Java SE Runtime Environment 1.8
 [JRE 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
-若有使用到 Selenium Standalone Server需有JRE 1.8以上才能執行。
+若有使用到 Selenium Standalone Server需有JRE 1.8以上才能執行。法辦法在官網下載時，請使用 http://sam/ 安裝。
 
 * #### 安裝後檢查
     ```zsh
@@ -91,17 +91,31 @@ Windows 7以上，Mac OSX 10.6以上，Linux 最新版本
 ```
 Web Driver Manager用來啟動Selenium Server 
 
-![alt text](assets/images/webdriver-manager-ceti-fail.png "result")
-如果沒辦法通過授權，請使用這個
-```zsh
-:~$ webdriver-manager update --ignore_ssl=true
-```
-
 * #### 安裝後檢查
     ```zsh
     :~$ webdriver-manager start
     ```
     測試啟動一個Server，啟動成功後開啟瀏覽器檢查一下http://localhost:4444/wd/hub
+
+
+* #### 糟遇錯誤時請參考
+
+    * ##### 沒辦法通過授權，出現下圖錯誤時
+
+        ![alt text](assets/images/webdriver-manager-ceti-fail.png "webdriver-manager-ceti-fail")
+
+        如果沒辦法通過授權，請使用這個
+        ```zsh
+        :~$ webdriver-manager update --ignore_ssl=true
+        ```
+
+    * ##### Curl connection socket 無法建立
+        ![alt text](assets/images/curl-socket-error.jpg "curl-socket-error")
+        
+        請設定proxy
+
+        ![alt text](assets/images/windows-env-proxy-setting.png "windows-env-proxy-setting")
+
 
 ## [確認Protractor正常運作]
 * 下載範本
